@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOGLE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>WELCOME TO BOOGLE <BR/>
+        <BR/>
+        Adding a new document: <BR/>
+        <pre><code>        
+curl -X PUT http://192.241.171.69:8080/Boogle/document/index -H 'Content-type:application/json' -d '
+{
+    "pageID" : "1",
+    "content": "the quick brown fox jumped over the lazy dog"
+  }
+'
+</code></pre>        
+        <BR/>
+        Listing all existing documents
+        <pre><code>curl -X GET http://192.241.171.69:8080/Boogle/document/index
+</code></pre>
+    <BR/>
+    Search documents from a web browser
+ <code><pre>
+http://192.241.171.69:8080/Boogle/document/search?query=fire fox
+    </pre></code>
+        
+        </div>
+    </body>
+    
+    
+</html>
