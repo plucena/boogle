@@ -272,6 +272,7 @@
         <fail unless="build.test.results.dir">Must set build.test.results.dir</fail>
         <fail unless="build.classes.excludes">Must set build.classes.excludes</fail>
         <fail unless="dist.war">Must set dist.war</fail>
+        <property name="j2ee.server.home" value="/opt/glassfish-4.0.0/" />
         <condition property="missing.j2ee.server.home">
             <and>
                 <matches pattern="j2ee.server.home" string="${j2ee.platform.classpath}"/>
